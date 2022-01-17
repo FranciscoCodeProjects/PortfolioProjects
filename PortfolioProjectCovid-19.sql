@@ -44,10 +44,11 @@ order by TotalDeathCount desc
 
 -- Showing continents with highest death count per Population
 
-Select continent, Max(cast(total_deaths as float)) as TotalDeathCount
-from PortfolioProject..CovidDeaths
-where continent is not null
-Group by continent
+Select location, SUM(cast(new_deaths as float)) as TotalDeathCount
+From PortfolioProject..CovidDeaths
+Where continent is null 
+and location not in ('World', 'European Union', 'International', 'High middle income', 'Lower middle income', 'Upper middle income', 'Low income', 'High income')
+Group by location
 order by TotalDeathCount desc
 
 -- Global Numbers
