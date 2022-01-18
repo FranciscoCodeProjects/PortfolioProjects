@@ -147,3 +147,5 @@ where dea.continent is not null
 
 select *
 from PercentagePopulationVaccinated
+
+--Querys that where later vizualised on Tableu and shown here url=https://public.tableau.com/app/profile/francisco8135/viz/CovidDashboard16-01-2022/Painel1?publish=yes
